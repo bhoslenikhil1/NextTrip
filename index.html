@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next-Trip — Explore the World, Live the Journey</title>
+<meta name="description" content="Next-Trip crafts premium domestic & international holiday packages — Goa, Kashmir, Kerala, Andaman, Himachal & Rajasthan tours, honeymoon packages, corporate & group tours. Get a free quote today.">
+<meta name="keywords" content="Goa tour packages from Mumbai, Girl's Only Trip to Goa, Kashmir Tour Package, Kerala Tour Package, Rajasthan Holiday Packages, Himachal Group Tours, International Tour Packages, Best Travel Agency, Domestic Tour Packages India">
+<meta property="og:title" content="Next-Trip — Explore the World, Live the Journey">
+<meta property="og:description" content="Premium curated holiday packages across India & beyond.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AD%3C/text%3E%3C/svg%3E">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<!-- Swiper -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <span>N</span><span>T</span>
+  </div>
+</div>
+
+<!-- Progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Next<span>-Trip</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#packages">Tours</a>
+      <a href="#international">International</a>
+      <a href="#corporate">Corporate</a>
+      <a href="#honeymoon">Honeymoon</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="tel:+918898705878" class="nav-phone"><i class="fa-solid fa-phone-volume"></i> +91 8898705878</a>
+      <button class="btn btn-accent btn-sm" id="getQuoteBtn">Get Quote</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1920&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1439066615861-d1af74d74000?q=80&w=1920&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1920&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop')"></div>
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="hero-noise"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow" data-aos="fade-down" data-aos-delay="100">Domestic &amp; International Holidays, Curated</p>
+    <h1 class="hero-title">
+      <span class="line" data-word>Explore the World.</span>
+      <span class="line" data-word>Live the Journey.</span>
+      <span class="line" data-word>Create Memories.</span>
+    </h1>
+    <p class="hero-sub" data-aos="fade-up" data-aos-delay="500">Handpicked itineraries across Goa, Kashmir, Kerala &amp; beyond — planned to the last detail, so you don't have to.</p>
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="650">
+      <a href="#packages" class="btn btn-primary">Explore Tours <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#contact" class="btn btn-ghost">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="hero-scrollcue">
+    <span>Scroll</span>
+    <div class="mouse"><div class="wheel"></div></div>
+  </div>
+
+  <!-- Signature floating search card -->
+  <div class="search-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="search-card-glow"></div>
+    <div class="search-field">
+      <label><i class="fa-solid fa-location-dot"></i> Destination</label>
+      <select>
+        <option>Where do you want to go?</option>
+        <option>Goa</option>
+        <option>Kashmir</option>
+        <option>Kerala</option>
+        <option>Andaman</option>
+        <option>Himachal Pradesh</option>
+        <option>Rajasthan</option>
+        <option>Coorg &amp; Ooty</option>
+      </select>
+    </div>
+    <div class="search-divider"></div>
+    <div class="search-field">
+      <label><i class="fa-regular fa-calendar"></i> Travel Month</label>
+      <select>
+        <option>Any month</option>
+        <option>August 2026</option>
+        <option>September 2026</option>
+        <option>October 2026</option>
+        <option>December 2026</option>
+      </select>
+    </div>
+    <div class="search-divider"></div>
+    <div class="search-field">
+      <label><i class="fa-solid fa-indian-rupee-sign"></i> Budget</label>
+      <select>
+        <option>Any budget</option>
+        <option>Under ₹15,000</option>
+        <option>₹15,000 – ₹30,000</option>
+        <option>₹30,000 – ₹60,000</option>
+        <option>₹60,000+</option>
+      </select>
+    </div>
+    <div class="search-divider"></div>
+    <div class="search-field">
+      <label><i class="fa-solid fa-people-group"></i> Travel Type</label>
+      <select>
+        <option>Any type</option>
+        <option>Honeymoon</option>
+        <option>Group Tour</option>
+        <option>Ladies Special</option>
+        <option>Corporate</option>
+        <option>Family</option>
+      </select>
+    </div>
+    <button class="btn btn-primary search-btn"><i class="fa-solid fa-magnifying-glass"></i> Search Packages</button>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<section class="stats-strip">
+  <div class="stat" data-count="14000">
+    <span class="stat-num">0</span><span class="stat-suffix">+</span>
+    <p>Happy Travelers</p>
+  </div>
+  <div class="stat" data-count="42">
+    <span class="stat-num">0</span><span class="stat-suffix">+</span>
+    <p>Destinations</p>
+  </div>
+  <div class="stat" data-count="860">
+    <span class="stat-num">0</span><span class="stat-suffix">+</span>
+    <p>Tours Completed</p>
+  </div>
+  <div class="stat" data-count="49" data-decimal="1">
+    <span class="stat-num">0</span><span class="stat-suffix">/5</span>
+    <p>Average Rating</p>
+  </div>
+</section>
+
+<!-- POPULAR DESTINATIONS -->
+<section class="section" id="destinations">
+  <div class="section-head" data-aos="fade-up">
+    <p class="eyebrow">Where next</p>
+    <h2>Popular Destinations</h2>
+    <p class="section-sub">From Goan sunsets to Himalayan sunrises — seven places our travelers can't stop talking about.</p>
+  </div>
+
+  <div class="dest-rail">
+    <div class="dest-card" data-aos="fade-up" data-aos-delay="0">
+      <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=900&auto=format&fit=crop" alt="Goa beaches">
+      <div class="dest-overlay">
+        <h3>Goa</h3>
+        <p>Beaches, parties &amp; Portuguese charm</p>
+        <a href="#" class="dest-btn">View Packages <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="dest-card" data-aos="fade-up" data-aos-delay="80">
+      <img src="https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=900&auto=format&fit=crop" alt="Kashmir valley">
+      <div class="dest-overlay">
+        <h3>Kashmir</h3>
+        <p>Paradise on Earth, snow to shikaras</p>
+        <a href="#" class="dest-btn">View Packages <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="dest-card" data-aos="fade-up" data-aos-delay="160">
+      <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=900&auto=format&fit=crop" alt="Kerala backwaters">
+      <div class="dest-overlay">
+        <h3>Kerala</h3>
+        <p>Backwaters, houseboats &amp; hill tea gardens</p>
+        <a href="#" class="dest-btn">View Packages <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="dest-card" data-aos="fade-up" data-aos-delay="240">
+      <img src="https://images.unsplash.com/photo-1586183189334-1a01aa3fa7d1?q=80&w=900&auto=format&fit=crop" alt="Andaman islands">
+      <div class="dest-overlay">
+        <h3>Andaman</h3>
+        <p>Turquoise water &amp; coral reefs</p>
+        <a href="#" class="dest-btn">View Packages <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="dest-card" data-aos="fade-up" data-aos-delay="0">
+      <img src="https://images.unsplash.com/photo-1626621341169-2ea2b757bc93?q=80&w=900&auto=format&fit=crop" alt="Himachal mountains">
+      <div class="dest-overlay">
+        <h3>Himachal</h3>
+        <p>Mountains, monasteries &amp; misty roads</p>
+        <a href="#" class="dest-btn">View Packages <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="dest-card" data-aos="fade-up" data-aos-delay="80">
+      <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=900&auto=format&fit=crop" alt="Rajasthan fort">
+      <div class="dest-overlay">
+        <h3>Rajasthan</h3>
+        <p>Forts, deserts &amp; royal heritage</p>
+        <a href="#" class="dest-btn">View Packages <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="dest-card" data-aos="fade-up" data-aos-delay="160">
+      <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=900&auto=format&fit=crop" alt="Coorg hills">
+      <div class="dest-overlay">
+        <h3>Coorg &amp; Ooty</h3>
+        <p>Coffee estates &amp; rolling hill stations</p>
+        <a href="#" class="dest-btn">View Packages <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED TOUR -->
+<section class="featured" id="featured">
+  <div class="featured-media" data-aos="fade-right">
+    <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=1200&auto=format&fit=crop" alt="Girl's Only Trip to Goa">
+    <span class="featured-badge">Open for Booking</span>
+  </div>
+  <div class="featured-body" data-aos="fade-left">
+    <p class="eyebrow">Featured Tour</p>
+    <h2>🌴 Girl's Only Trip to Goa</h2>
+    <p class="featured-tagline">What happens in Goa, stays in Goa! 💄 Tan will fade, memories won't. ✨</p>
+    <div class="featured-meta">
+      <span><i class="fa-regular fa-calendar-days"></i> 13 Aug – 16 Aug 2026</span>
+      <span><i class="fa-solid fa-moon"></i> 4 Days / 3 Nights</span>
+    </div>
+    <ul class="featured-includes">
+      <li><i class="fa-solid fa-check"></i> Breakfast, Lunch &amp; Dinner</li>
+      <li><i class="fa-solid fa-check"></i> Travel Included</li>
+      <li><i class="fa-solid fa-check"></i> All Entry Fees Included</li>
+      <li><i class="fa-solid fa-check"></i> All Girls Group, Experienced Female Tour Lead</li>
+    </ul>
+
+    <div class="countdown-wrap">
+      <p class="countdown-label">Booking closes in</p>
+      <div class="countdown" id="countdown">
+        <div class="cd-box"><span id="cd-days">00</span><small>Days</small></div>
+        <div class="cd-box"><span id="cd-hours">00</span><small>Hours</small></div>
+        <div class="cd-box"><span id="cd-mins">00</span><small>Minutes</small></div>
+        <div class="cd-box"><span id="cd-secs">00</span><small>Seconds</small></div>
+      </div>
+    </div>
+
+    <div class="featured-actions">
+      <a href="#contact" class="btn btn-primary">Book Now</a>
+      <a href="#" class="btn btn-ghost"><i class="fa-solid fa-file-arrow-down"></i> Download Itinerary</a>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section" id="packages">
+  <div class="section-head" data-aos="fade-up">
+    <p class="eyebrow">Tour Packages</p>
+    <h2>Handpicked, Priced Transparently</h2>
+    <p class="section-sub">No hidden costs, no surprise add-ons — just honest pricing on every package.</p>
+  </div>
+
+  <div class="pkg-grid">
+    <div class="pkg-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=800&auto=format&fit=crop')">
+        <span class="pkg-tag open">Booking Open</span>
+      </div>
+      <div class="pkg-body">
+        <h3>Kerala</h3>
+        <p class="pkg-desc">Backwaters, Munnar &amp; Alleppey houseboat stay</p>
+        <div class="pkg-foot">
+          <div><small>Starting</small><strong>₹19,999</strong></div>
+          <a href="#" class="btn btn-outline btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pkg-card" data-aos="fade-up" data-aos-delay="80">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=800&auto=format&fit=crop')">
+        <span class="pkg-tag soon">Coming Soon</span>
+      </div>
+      <div class="pkg-body">
+        <h3>Kashmir</h3>
+        <p class="pkg-desc">Gulmarg, Pahalgam &amp; Dal Lake shikara rides</p>
+        <div class="pkg-foot">
+          <div><small>Starting</small><strong>₹24,999</strong></div>
+          <a href="#" class="btn btn-outline btn-sm">Notify Me</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pkg-card" data-aos="fade-up" data-aos-delay="160">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=800&auto=format&fit=crop')">
+        <span class="pkg-tag open">Booking Open</span>
+      </div>
+      <div class="pkg-body">
+        <h3>Goa</h3>
+        <p class="pkg-desc">North &amp; South Goa beaches, cruise &amp; nightlife</p>
+        <div class="pkg-foot">
+          <div><small>Starting</small><strong>₹14,999</strong></div>
+          <a href="#" class="btn btn-outline btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pkg-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=800&auto=format&fit=crop')">
+        <span class="pkg-tag open">Booking Open</span>
+      </div>
+      <div class="pkg-body">
+        <h3>Goa Off-Beat</h3>
+        <p class="pkg-desc">Hidden waterfalls, Divar Island &amp; quiet villages</p>
+        <div class="pkg-foot">
+          <div><small>Starting</small><strong>₹16,499</strong></div>
+          <a href="goa-offbeat.html" class="btn btn-outline btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pkg-card" data-aos="fade-up" data-aos-delay="240">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1586183189334-1a01aa3fa7d1?q=80&w=800&auto=format&fit=crop')">
+        <span class="pkg-tag soon">Coming Soon</span>
+      </div>
+      <div class="pkg-body">
+        <h3>Andaman</h3>
+        <p class="pkg-desc">Havelock, Radhanagar Beach &amp; scuba diving</p>
+        <div class="pkg-foot">
+          <div><small>Starting</small><strong>₹27,999</strong></div>
+          <a href="#" class="btn btn-outline btn-sm">Notify Me</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pkg-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1626621341169-2ea2b757bc93?q=80&w=800&auto=format&fit=crop')">
+        <span class="pkg-tag open">Booking Open</span>
+      </div>
+      <div class="pkg-body">
+        <h3>Himachal</h3>
+        <p class="pkg-desc">Manali, Kasol &amp; Solang Valley adventure</p>
+        <div class="pkg-foot">
+          <div><small>Starting</small><strong>₹17,499</strong></div>
+          <a href="#" class="btn btn-outline btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pkg-card" data-aos="fade-up" data-aos-delay="80">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=800&auto=format&fit=crop')">
+        <span class="pkg-tag soon">Coming Soon</span>
+      </div>
+      <div class="pkg-body">
+        <h3>Rajasthan</h3>
+        <p class="pkg-desc">Jaipur, Udaipur &amp; Jaisalmer desert safari</p>
+        <div class="pkg-foot">
+          <div><small>Starting</small><strong>₹22,999</strong></div>
+          <a href="#" class="btn btn-outline btn-sm">Notify Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section why" id="why">
+  <div class="section-head" data-aos="fade-up">
+    <p class="eyebrow">Why Next-Trip</p>
+    <h2>Trusted By Thousands of Travelers</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card" data-aos="zoom-in" data-aos-delay="0"><i class="fa-solid fa-hotel"></i><h4>Verified Hotels</h4><p>Every stay personally vetted for comfort &amp; hygiene.</p></div>
+    <div class="why-card" data-aos="zoom-in" data-aos-delay="80"><i class="fa-solid fa-bus"></i><h4>Comfortable Transport</h4><p>AC vehicles &amp; well-maintained fleets, always.</p></div>
+    <div class="why-card" data-aos="zoom-in" data-aos-delay="160"><i class="fa-solid fa-user-tie"></i><h4>Local Guides</h4><p>Insider stories from people who know the region.</p></div>
+    <div class="why-card" data-aos="zoom-in" data-aos-delay="240"><i class="fa-solid fa-headset"></i><h4>24×7 Support</h4><p>A real human, always one call away on your trip.</p></div>
+    <div class="why-card" data-aos="zoom-in" data-aos-delay="0"><i class="fa-solid fa-tags"></i><h4>Best Prices</h4><p>Transparent pricing — no hidden fees, ever.</p></div>
+    <div class="why-card" data-aos="zoom-in" data-aos-delay="80"><i class="fa-solid fa-shield-heart"></i><h4>Safe Trips</h4><p>Insured travel &amp; verified safety protocols.</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testi" id="testimonials">
+  <div class="section-head" data-aos="fade-up">
+    <p class="eyebrow">Kind Words</p>
+    <h2>What Our Travelers Say</h2>
+  </div>
+
+  <div class="swiper testiSwiper" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"The Girl's Only Trip to Goa was absolutely unforgettable! What happens in Goa, stays in Goa indeed! Everything was perfectly planned and we made memories that will last forever."</p>
+          <div class="testi-user"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" alt="Traveler"><div><strong>Priya Sharma</strong><span>Mumbai</span></div></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Our Kashmir honeymoon package exceeded every expectation. The houseboat stay was magical."</p>
+          <div class="testi-user"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" alt="Traveler"><div><strong>Rohan &amp; Isha</strong><span>Pune</span></div></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Booked a corporate offsite to Coorg for 40 people. Flawless logistics from Next-Trip's team."</p>
+          <div class="testi-user"><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=100&auto=format&fit=crop" alt="Traveler"><div><strong>Anil Kapoor</strong><span>HR Lead, Bengaluru</span></div></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Rajasthan royal circuit was beyond beautiful — every fort, every meal, planned to perfection."</p>
+          <div class="testi-user"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop" alt="Traveler"><div><strong>Neha Gupta</strong><span>Delhi</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery" id="gallery">
+  <div class="section-head" data-aos="fade-up">
+    <p class="eyebrow">Moments</p>
+    <h2>From Our Travelers' Lens</h2>
+  </div>
+  <div class="masonry">
+    <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" alt="Goa">
+    <img src="https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" data-aos-delay="60" alt="Kashmir">
+    <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" data-aos-delay="120" alt="Kerala">
+    <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" alt="Coorg">
+    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" data-aos-delay="60" alt="Rajasthan">
+    <img src="https://images.unsplash.com/photo-1586183189334-1a01aa3fa7d1?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" data-aos-delay="120" alt="Andaman">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-bg" style="background-image:url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1600&auto=format&fit=crop')"></div>
+  <div class="about-content" data-aos="fade-up">
+    <p class="eyebrow">Our Story</p>
+    <h2>Built By Travelers, For Travelers</h2>
+    <p>Next-Trip started with a simple frustration: too many holidays were being ruined by bad planning. Today we design domestic &amp; international itineraries, honeymoon packages, and corporate offsites for thousands of travelers every year — each one built around real local knowledge, not a template.</p>
+    <a href="#contact" class="btn btn-primary">Plan My Trip</a>
+  </div>
+</section>
+
+<!-- CONTACT / QUOTE -->
+<section class="section contact" id="contact">
+  <div class="section-head" data-aos="fade-up">
+    <p class="eyebrow">Get In Touch</p>
+    <h2>Let's Plan Your Next Trip</h2>
+  </div>
+  <div class="contact-grid">
+    <form class="quote-form" data-aos="fade-right" onsubmit="return handleQuoteSubmit(event)">
+      <div class="form-row">
+        <div class="form-field"><label>Destination *</label><input type="text" required placeholder="e.g. Goa"></div>
+        <div class="form-field"><label>Departure City *</label><input type="text" required placeholder="e.g. Mumbai"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-field"><label>Name *</label><input type="text" required placeholder="Your full name"></div>
+        <div class="form-field"><label>Phone *</label><input type="tel" required placeholder="+91"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-field"><label>Email *</label><input type="email" required placeholder="you@example.com"></div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+    </form>
+    <div class="contact-side" data-aos="fade-left">
+      <div class="contact-item"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><span>+91 8976396026</span></div></div>
+      <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Call Us</strong><span>+91 8898705878</span></div></div>
+      <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>hello@next-trip.com</span></div></div>
+      <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><strong>Office</strong><span>Mumbai, Maharashtra, India</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="brand">Next<span>-Trip</span></a>
+      <p>Premium curated holidays across India &amp; the world.</p>
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#destinations">Destinations</a>
+      <a href="#packages">Tour Packages</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Tours</h4>
+      <a href="#">Honeymoon Packages</a>
+      <a href="#">Group Tours</a>
+      <a href="#">Corporate Tours</a>
+      <a href="#">International Tours</a>
+    </div>
+    <div class="footer-col newsletter">
+      <h4>Newsletter</h4>
+      <p>Get seasonal offers &amp; new itineraries in your inbox.</p>
+      <form class="news-form" onsubmit="return handleNewsletter(event)">
+        <input type="email" required placeholder="Your email">
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Next-Trip. All rights reserved.</p>
+    <p>Made with <i class="fa-solid fa-heart"></i> for travelers everywhere.</p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/918976396026" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Lead Popup -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-card">
+    <button class="popup-close" id="popupClose" aria-label="Close">&times;</button>
+    <p class="eyebrow">Limited Time</p>
+    <h3>Plan Your Dream Holiday</h3>
+    <p class="popup-sub">Share a few details and our travel expert will call you within 30 minutes.</p>
+    <form onsubmit="return handlePopupSubmit(event)">
+      <input type="text" required placeholder="Destination *">
+      <input type="text" required placeholder="Departure City *">
+      <input type="text" required placeholder="Name *">
+      <input type="tel" required placeholder="Phone *">
+      <input type="email" required placeholder="Email *">
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
