@@ -150,6 +150,21 @@ section {
     transform: scale(1.05);
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 46px;
+    width: auto;
+    display: block;
+    border-radius: 10px;
+    background: #fff;
+    padding: 4px 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
 .nav-inner {
     display: flex;
     align-items: center;
@@ -329,10 +344,11 @@ section {
     min-height: 100vh;
     min-height: 100svh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     overflow: hidden;
     padding: 0;
+    padding-top: 140px;
     padding-bottom: 300px;
 }
 
@@ -1210,13 +1226,6 @@ section {
     gap: 15px;
 }
 
-.testi-user img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
 .testi-user strong {
     display: block;
     color: #fff;
@@ -1796,7 +1805,9 @@ section {
 
     .hero {
         flex-direction: column;
+        align-items: center;
         gap: 20px;
+        padding-top: 100px;
         padding-bottom: 40px;
     }
 
@@ -1902,6 +1913,10 @@ section {
 
     .brand {
         font-size: 20px;
+    }
+
+    .nav-logo img {
+        height: 36px;
     }
 
     .hero-title {
