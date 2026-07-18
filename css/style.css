@@ -24,6 +24,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 body {
@@ -590,6 +592,7 @@ section {
     bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
+    min-width: 0;
     background: rgba(4, 11, 22, 0.95);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(0, 207, 255, 0.2);
@@ -610,6 +613,8 @@ section {
     gap: 8px;
     overflow-x: auto;
     padding-bottom: 2px;
+    min-width: 0;
+    max-width: 100%;
 }
 
 .search-tab {
@@ -649,6 +654,7 @@ section {
     display: flex;
     gap: 15px;
     align-items: flex-end;
+    min-width: 0;
 }
 
 @keyframes slideUp {
