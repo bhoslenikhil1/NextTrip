@@ -668,6 +668,17 @@ section {
     }
 }
 
+@keyframes slideUpMobile {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .search-card-glow {
     position: absolute;
     top: -50px;
@@ -1822,6 +1833,7 @@ section {
         bottom: auto;
         left: auto;
         transform: none;
+        animation: slideUpMobile 0.8s ease-out 0.5s both;
         width: 90%;
         max-width: none;
         margin: 0 auto;
