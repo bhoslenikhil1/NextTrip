@@ -727,6 +727,11 @@ section {
     outline: none;
 }
 
+.search-field select option {
+    color: #09162B;
+    background: #fff;
+}
+
 .search-divider {
     width: 1px;
     background: rgba(0, 207, 255, 0.2);

@@ -122,7 +122,7 @@ function animateCounters() {
     
     stats.forEach(stat => {
         const countElement = stat.querySelector('.stat-num');
-        const target = parseInt(stat.getAttribute('data-count'));
+        const target = parseFloat(stat.getAttribute('data-count'));
         const hasDecimal = stat.hasAttribute('data-decimal');
         const duration = 2000;
         const steps = 60;
