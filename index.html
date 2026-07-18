@@ -56,7 +56,7 @@
     </nav>
 
     <div class="nav-cta">
-      <a href="tel:+918898705878" class="nav-phone"><i class="fa-solid fa-phone-volume"></i> +91 8898705878</a>
+      <a href="tel:+918956617636" class="nav-phone"><i class="fa-solid fa-phone-volume"></i> +91 8956617636</a>
       <button class="btn btn-accent btn-sm" id="getQuoteBtn">Get Quote</button>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
@@ -74,6 +74,7 @@
   </div>
   <div class="hero-scrim"></div>
   <div class="hero-noise"></div>
+  <div class="hero-dots" id="heroDots" aria-hidden="true"></div>
 
   <div class="hero-content">
     <p class="eyebrow" data-aos="fade-down" data-aos-delay="100">Domestic &amp; International Holidays, Curated</p>
@@ -83,6 +84,13 @@
       <span class="line" data-word>Create Memories.</span>
     </h1>
     <p class="hero-sub" data-aos="fade-up" data-aos-delay="500">Handpicked itineraries across Goa, Kashmir, Kerala &amp; beyond — planned to the last detail, so you don't have to.</p>
+    <div class="hero-trust" data-aos="fade-up" data-aos-delay="580">
+      <div class="trust-item"><span class="trust-stars">★★★★★</span><strong>4.9/5</strong> Rated</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><i class="fa-solid fa-users"></i><strong>14,000+</strong> Happy Travelers</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><i class="fa-solid fa-shield-heart"></i> 100% Verified Stays</div>
+    </div>
     <div class="hero-actions" data-aos="fade-up" data-aos-delay="650">
       <a href="#packages" class="btn btn-primary">Explore Tours <i class="fa-solid fa-arrow-right"></i></a>
       <a href="#contact" class="btn btn-ghost">Get a Quote</a>
@@ -94,57 +102,67 @@
     <div class="mouse"><div class="wheel"></div></div>
   </div>
 
-  <!-- Signature floating search card -->
+  <!-- Signature floating booking widget -->
   <div class="search-card" data-aos="fade-up" data-aos-delay="200">
     <div class="search-card-glow"></div>
-    <div class="search-field">
-      <label><i class="fa-solid fa-location-dot"></i> Destination</label>
-      <select>
-        <option>Where do you want to go?</option>
-        <option>Goa</option>
-        <option>Kashmir</option>
-        <option>Kerala</option>
-        <option>Andaman</option>
-        <option>Himachal Pradesh</option>
-        <option>Rajasthan</option>
-        <option>Coorg &amp; Ooty</option>
-      </select>
+
+    <div class="search-tabs" role="tablist">
+      <button class="search-tab active" data-tab="domestic" type="button"><i class="fa-solid fa-map-location-dot"></i> Domestic</button>
+      <button class="search-tab" data-tab="international" type="button"><i class="fa-solid fa-earth-asia"></i> International</button>
+      <button class="search-tab" data-tab="honeymoon" type="button"><i class="fa-solid fa-heart"></i> Honeymoon</button>
+      <button class="search-tab" data-tab="group" type="button"><i class="fa-solid fa-people-group"></i> Group / Corporate</button>
     </div>
-    <div class="search-divider"></div>
-    <div class="search-field">
-      <label><i class="fa-regular fa-calendar"></i> Travel Month</label>
-      <select>
-        <option>Any month</option>
-        <option>August 2026</option>
-        <option>September 2026</option>
-        <option>October 2026</option>
-        <option>December 2026</option>
-      </select>
+
+    <div class="search-fields">
+      <div class="search-field">
+        <label><i class="fa-solid fa-location-dot"></i> Destination</label>
+        <select>
+          <option>Where do you want to go?</option>
+          <option>Goa</option>
+          <option>Kashmir</option>
+          <option>Kerala</option>
+          <option>Andaman</option>
+          <option>Himachal Pradesh</option>
+          <option>Rajasthan</option>
+          <option>Coorg &amp; Ooty</option>
+        </select>
+      </div>
+      <div class="search-divider"></div>
+      <div class="search-field">
+        <label><i class="fa-regular fa-calendar"></i> Travel Month</label>
+        <select>
+          <option>Any month</option>
+          <option>August 2026</option>
+          <option>September 2026</option>
+          <option>October 2026</option>
+          <option>December 2026</option>
+        </select>
+      </div>
+      <div class="search-divider"></div>
+      <div class="search-field">
+        <label><i class="fa-solid fa-indian-rupee-sign"></i> Budget</label>
+        <select>
+          <option>Any budget</option>
+          <option>Under ₹15,000</option>
+          <option>₹15,000 – ₹30,000</option>
+          <option>₹30,000 – ₹60,000</option>
+          <option>₹60,000+</option>
+        </select>
+      </div>
+      <div class="search-divider"></div>
+      <div class="search-field">
+        <label><i class="fa-solid fa-people-group"></i> Travel Type</label>
+        <select data-role="travel-type">
+          <option>Any type</option>
+          <option>Honeymoon</option>
+          <option>Group Tour</option>
+          <option>Ladies Special</option>
+          <option>Corporate</option>
+          <option>Family</option>
+        </select>
+      </div>
+      <button class="btn btn-primary search-btn"><i class="fa-solid fa-magnifying-glass"></i> Search Packages</button>
     </div>
-    <div class="search-divider"></div>
-    <div class="search-field">
-      <label><i class="fa-solid fa-indian-rupee-sign"></i> Budget</label>
-      <select>
-        <option>Any budget</option>
-        <option>Under ₹15,000</option>
-        <option>₹15,000 – ₹30,000</option>
-        <option>₹30,000 – ₹60,000</option>
-        <option>₹60,000+</option>
-      </select>
-    </div>
-    <div class="search-divider"></div>
-    <div class="search-field">
-      <label><i class="fa-solid fa-people-group"></i> Travel Type</label>
-      <select>
-        <option>Any type</option>
-        <option>Honeymoon</option>
-        <option>Group Tour</option>
-        <option>Ladies Special</option>
-        <option>Corporate</option>
-        <option>Family</option>
-      </select>
-    </div>
-    <button class="btn btn-primary search-btn"><i class="fa-solid fa-magnifying-glass"></i> Search Packages</button>
   </div>
 </section>
 
@@ -186,7 +204,7 @@
       </div>
     </div>
     <div class="dest-card" data-aos="fade-up" data-aos-delay="80">
-      <img src="https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=900&auto=format&fit=crop" alt="Kashmir valley">
+      <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=900&auto=format&fit=crop" alt="Kashmir valley">
       <div class="dest-overlay">
         <h3>Kashmir</h3>
         <p>Paradise on Earth, snow to shikaras</p>
@@ -202,7 +220,7 @@
       </div>
     </div>
     <div class="dest-card" data-aos="fade-up" data-aos-delay="240">
-      <img src="https://images.unsplash.com/photo-1586183189334-1a01aa3fa7d1?q=80&w=900&auto=format&fit=crop" alt="Andaman islands">
+      <img src="https://images.unsplash.com/photo-1638459032642-c658d3d888c0?q=80&w=900&auto=format&fit=crop" alt="Andaman islands">
       <div class="dest-overlay">
         <h3>Andaman</h3>
         <p>Turquoise water &amp; coral reefs</p>
@@ -210,7 +228,7 @@
       </div>
     </div>
     <div class="dest-card" data-aos="fade-up" data-aos-delay="0">
-      <img src="https://images.unsplash.com/photo-1626621341169-2ea2b757bc93?q=80&w=900&auto=format&fit=crop" alt="Himachal mountains">
+      <img src="https://images.unsplash.com/photo-1652501834567-937de29c4533?q=80&w=900&auto=format&fit=crop" alt="Himachal mountains">
       <div class="dest-overlay">
         <h3>Himachal</h3>
         <p>Mountains, monasteries &amp; misty roads</p>
@@ -218,7 +236,7 @@
       </div>
     </div>
     <div class="dest-card" data-aos="fade-up" data-aos-delay="80">
-      <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=900&auto=format&fit=crop" alt="Rajasthan fort">
+      <img src="https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?q=80&w=900&auto=format&fit=crop" alt="Rajasthan fort">
       <div class="dest-overlay">
         <h3>Rajasthan</h3>
         <p>Forts, deserts &amp; royal heritage</p>
@@ -239,7 +257,7 @@
 <!-- FEATURED TOUR -->
 <section class="featured" id="featured">
   <div class="featured-media" data-aos="fade-right">
-    <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=1200&auto=format&fit=crop" alt="Girl's Only Trip to Goa">
+    <img src="https://images.unsplash.com/photo-1695411560235-595738c0dbda?q=80&w=1200&auto=format&fit=crop" alt="Girl's Only Trip to Goa">
     <span class="featured-badge">Open for Booking</span>
   </div>
   <div class="featured-body" data-aos="fade-left">
@@ -292,13 +310,13 @@
         <p class="pkg-desc">Backwaters, Munnar &amp; Alleppey houseboat stay</p>
         <div class="pkg-foot">
           <div><small>Starting</small><strong>₹19,999</strong></div>
-          <a href="#" class="btn btn-outline btn-sm">View Details</a>
+          <a href="https://wa.me/918956617636?text=Hi%2C%20I%27m%20interested%20in%20the%20Kerala%20package" target="_blank" class="btn btn-outline btn-sm">Get Quote</a>
         </div>
       </div>
     </div>
 
     <div class="pkg-card" data-aos="fade-up" data-aos-delay="80">
-      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=800&auto=format&fit=crop')">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=800&auto=format&fit=crop')">
         <span class="pkg-tag soon">Coming Soon</span>
       </div>
       <div class="pkg-body">
@@ -306,7 +324,7 @@
         <p class="pkg-desc">Gulmarg, Pahalgam &amp; Dal Lake shikara rides</p>
         <div class="pkg-foot">
           <div><small>Starting</small><strong>₹24,999</strong></div>
-          <a href="#" class="btn btn-outline btn-sm">Notify Me</a>
+          <span class="btn btn-outline btn-sm btn-disabled">Coming Soon</span>
         </div>
       </div>
     </div>
@@ -320,7 +338,7 @@
         <p class="pkg-desc">North &amp; South Goa beaches, cruise &amp; nightlife</p>
         <div class="pkg-foot">
           <div><small>Starting</small><strong>₹14,999</strong></div>
-          <a href="#" class="btn btn-outline btn-sm">View Details</a>
+          <a href="https://wa.me/918956617636?text=Hi%2C%20I%27m%20interested%20in%20the%20Goa%20package" target="_blank" class="btn btn-outline btn-sm">Get Quote</a>
         </div>
       </div>
     </div>
@@ -334,13 +352,13 @@
         <p class="pkg-desc">Hidden waterfalls, Divar Island &amp; quiet villages</p>
         <div class="pkg-foot">
           <div><small>Starting</small><strong>₹16,499</strong></div>
-          <a href="goa-offbeat.html" class="btn btn-outline btn-sm">View Details</a>
+          <a href="https://wa.me/918956617636?text=Hi%2C%20I%27m%20interested%20in%20the%20Goa%20Off-Beat%20package" target="_blank" class="btn btn-outline btn-sm">Get Quote</a>
         </div>
       </div>
     </div>
 
     <div class="pkg-card" data-aos="fade-up" data-aos-delay="240">
-      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1586183189334-1a01aa3fa7d1?q=80&w=800&auto=format&fit=crop')">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1638459032642-c658d3d888c0?q=80&w=800&auto=format&fit=crop')">
         <span class="pkg-tag soon">Coming Soon</span>
       </div>
       <div class="pkg-body">
@@ -348,13 +366,13 @@
         <p class="pkg-desc">Havelock, Radhanagar Beach &amp; scuba diving</p>
         <div class="pkg-foot">
           <div><small>Starting</small><strong>₹27,999</strong></div>
-          <a href="#" class="btn btn-outline btn-sm">Notify Me</a>
+          <span class="btn btn-outline btn-sm btn-disabled">Coming Soon</span>
         </div>
       </div>
     </div>
 
     <div class="pkg-card" data-aos="fade-up" data-aos-delay="0">
-      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1626621341169-2ea2b757bc93?q=80&w=800&auto=format&fit=crop')">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1652501834567-937de29c4533?q=80&w=800&auto=format&fit=crop')">
         <span class="pkg-tag open">Booking Open</span>
       </div>
       <div class="pkg-body">
@@ -362,13 +380,13 @@
         <p class="pkg-desc">Manali, Kasol &amp; Solang Valley adventure</p>
         <div class="pkg-foot">
           <div><small>Starting</small><strong>₹17,499</strong></div>
-          <a href="#" class="btn btn-outline btn-sm">View Details</a>
+          <a href="https://wa.me/918956617636?text=Hi%2C%20I%27m%20interested%20in%20the%20Himachal%20package" target="_blank" class="btn btn-outline btn-sm">Get Quote</a>
         </div>
       </div>
     </div>
 
     <div class="pkg-card" data-aos="fade-up" data-aos-delay="80">
-      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=800&auto=format&fit=crop')">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?q=80&w=800&auto=format&fit=crop')">
         <span class="pkg-tag soon">Coming Soon</span>
       </div>
       <div class="pkg-body">
@@ -376,7 +394,7 @@
         <p class="pkg-desc">Jaipur, Udaipur &amp; Jaisalmer desert safari</p>
         <div class="pkg-foot">
           <div><small>Starting</small><strong>₹22,999</strong></div>
-          <a href="#" class="btn btn-outline btn-sm">Notify Me</a>
+          <span class="btn btn-outline btn-sm btn-disabled">Coming Soon</span>
         </div>
       </div>
     </div>
@@ -449,11 +467,11 @@
   </div>
   <div class="masonry">
     <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" alt="Goa">
-    <img src="https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" data-aos-delay="60" alt="Kashmir">
+    <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" data-aos-delay="60" alt="Kashmir">
     <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" data-aos-delay="120" alt="Kerala">
     <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" alt="Coorg">
-    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" data-aos-delay="60" alt="Rajasthan">
-    <img src="https://images.unsplash.com/photo-1586183189334-1a01aa3fa7d1?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" data-aos-delay="120" alt="Andaman">
+    <img src="https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" data-aos-delay="60" alt="Rajasthan">
+    <img src="https://images.unsplash.com/photo-1638459032642-c658d3d888c0?q=80&w=600&auto=format&fit=crop" data-aos="fade-up" data-aos-delay="120" alt="Andaman">
   </div>
 </section>
 
@@ -475,25 +493,28 @@
     <h2>Let's Plan Your Next Trip</h2>
   </div>
   <div class="contact-grid">
-    <form class="quote-form" data-aos="fade-right" onsubmit="return handleQuoteSubmit(event)">
+    <form class="quote-form" data-aos="fade-right" action="https://formsubmit.co/MailNextTrip@gmail.com" method="POST" onsubmit="return handleQuoteSubmit(event)">
+      <input type="hidden" name="_subject" value="New Trip Quote Request - Next-Trip">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
       <div class="form-row">
-        <div class="form-field"><label>Destination *</label><input type="text" required placeholder="e.g. Goa"></div>
-        <div class="form-field"><label>Departure City *</label><input type="text" required placeholder="e.g. Mumbai"></div>
+        <div class="form-field"><label>Destination *</label><input type="text" name="Destination" required placeholder="e.g. Goa"></div>
+        <div class="form-field"><label>Departure City *</label><input type="text" name="Departure City" required placeholder="e.g. Mumbai"></div>
       </div>
       <div class="form-row">
-        <div class="form-field"><label>Name *</label><input type="text" required placeholder="Your full name"></div>
-        <div class="form-field"><label>Phone *</label><input type="tel" required placeholder="+91"></div>
+        <div class="form-field"><label>Name *</label><input type="text" name="Name" required placeholder="Your full name"></div>
+        <div class="form-field"><label>Phone *</label><input type="tel" name="Phone" required placeholder="+91"></div>
       </div>
       <div class="form-row">
-        <div class="form-field"><label>Email *</label><input type="email" required placeholder="you@example.com"></div>
+        <div class="form-field"><label>Email *</label><input type="email" name="Email" required placeholder="you@example.com"></div>
       </div>
       <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
     </form>
     <div class="contact-side" data-aos="fade-left">
-      <div class="contact-item"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><span>+91 8976396026</span></div></div>
-      <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Call Us</strong><span>+91 8898705878</span></div></div>
-      <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>hello@next-trip.com</span></div></div>
-      <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><strong>Office</strong><span>Mumbai, Maharashtra, India</span></div></div>
+      <div class="contact-item"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><span>+91 8956617636</span></div></div>
+      <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Call Us</strong><span>+91 8956617636</span></div></div>
+      <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>MailNextTrip@gmail.com</span></div></div>
+      <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><strong>Office</strong><span>Kalyan, Titwala &amp; Alibag - Maharashtra</span></div></div>
     </div>
   </div>
 </section>
@@ -541,7 +562,7 @@
 </footer>
 
 <!-- Floating WhatsApp -->
-<a href="https://wa.me/918976396026" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://wa.me/918956617636" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <!-- Back to top -->
 <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
@@ -553,12 +574,15 @@
     <p class="eyebrow">Limited Time</p>
     <h3>Plan Your Dream Holiday</h3>
     <p class="popup-sub">Share a few details and our travel expert will call you within 30 minutes.</p>
-    <form onsubmit="return handlePopupSubmit(event)">
-      <input type="text" required placeholder="Destination *">
-      <input type="text" required placeholder="Departure City *">
-      <input type="text" required placeholder="Name *">
-      <input type="tel" required placeholder="Phone *">
-      <input type="email" required placeholder="Email *">
+    <form action="https://formsubmit.co/MailNextTrip@gmail.com" method="POST" onsubmit="return handlePopupSubmit(event)">
+      <input type="hidden" name="_subject" value="New Popup Lead - Next-Trip">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="Destination" required placeholder="Destination *">
+      <input type="text" name="Departure City" required placeholder="Departure City *">
+      <input type="text" name="Name" required placeholder="Name *">
+      <input type="tel" name="Phone" required placeholder="Phone *">
+      <input type="email" name="Email" required placeholder="Email *">
       <button type="submit" class="btn btn-primary btn-block">Submit</button>
     </form>
   </div>

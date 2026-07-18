@@ -78,17 +78,35 @@ navItems.forEach(item => {
 let currentSlide = 0;
 const slides = document.querySelectorAll('.hero-slide');
 const totalSlides = slides.length;
+const heroDots = document.getElementById('heroDots');
 
 function showSlide(n) {
     slides.forEach(slide => slide.classList.remove('active'));
     currentSlide = (n + totalSlides) % totalSlides;
     slides[currentSlide].classList.add('active');
+    document.querySelectorAll('.hero-dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
 }
 
-// Auto-advance slides
-setInterval(() => {
-    showSlide(currentSlide + 1);
-}, 5000);
+// Build slide indicator dots
+if (heroDots) {
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'hero-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        dot.addEventListener('click', () => showSlide(i));
+        heroDots.appendChild(dot);
+    });
+}
+
+// Auto-advance slides (pauses while hovering the hero)
+let heroInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+const heroSection = document.getElementById('home');
+if (heroSection) {
+    heroSection.addEventListener('mouseenter', () => clearInterval(heroInterval));
+    heroSection.addEventListener('mouseleave', () => {
+        heroInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+    });
+}
 
 // ===========================
 // STATS COUNTER
@@ -271,65 +289,60 @@ if (popupOverlay) {
 // FORM HANDLERS
 // ===========================
 
+function submitLeadForm(form, btn, onDone) {
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    const endpoint = 'https://formsubmit.co/ajax/' + form.action.split('/').pop();
+
+    fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+    })
+    .then(() => {
+        btn.textContent = '✓ Request Sent!';
+        btn.style.background = '#00D97E';
+        onDone && onDone();
+    })
+    .catch(() => {
+        btn.textContent = 'Failed — Try Again';
+        btn.style.background = '#FF4444';
+    })
+    .finally(() => {
+        setTimeout(() => {
+            btn.disabled = false;
+            btn.textContent = originalText;
+            btn.style.background = '';
+        }, 2000);
+    });
+}
+
 function handleQuoteSubmit(event) {
     event.preventDefault();
-    
+
     const form = event.target;
-    const formData = {
-        destination: form.elements[0].value,
-        departureCity: form.elements[1].value,
-        name: form.elements[2].value,
-        phone: form.elements[3].value,
-        email: form.elements[4].value,
-    };
-    
-    // Log form data (in real app, send to backend)
-    console.log('Quote Request Submitted:', formData);
-    
-    // Show success message
     const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = '✓ Request Sent!';
-    btn.style.background = '#00D97E';
-    
-    setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        form.reset();
-    }, 2000);
-    
+
+    submitLeadForm(form, btn, () => form.reset());
+
     return false;
 }
 
 function handlePopupSubmit(event) {
     event.preventDefault();
-    
+
     const form = event.target;
-    const formData = {
-        destination: form.elements[0].value,
-        departureCity: form.elements[1].value,
-        name: form.elements[2].value,
-        phone: form.elements[3].value,
-        email: form.elements[4].value,
-    };
-    
-    console.log('Popup Form Submitted:', formData);
-    
-    // Show success and close
     const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = '✓ Submitted!';
-    btn.style.background = '#00D97E';
-    
-    setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
+
+    submitLeadForm(form, btn, () => {
         form.reset();
         if (popupOverlay) {
             popupOverlay.classList.remove('show');
         }
-    }, 1500);
-    
+    });
+
     return false;
 }
 
@@ -378,6 +391,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
+        }
+    });
+});
+
+// ===========================
+// SEARCH TABS (booking widget)
+// ===========================
+
+const searchTabs = document.querySelectorAll('.search-tab');
+const travelTypeSelect = document.querySelector('[data-role="travel-type"]');
+const tabDefaults = { domestic: 'Any type', international: 'Any type', honeymoon: 'Honeymoon', group: 'Group Tour' };
+
+searchTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        searchTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        if (travelTypeSelect && tabDefaults[tab.dataset.tab]) {
+            travelTypeSelect.value = tabDefaults[tab.dataset.tab];
         }
     });
 });
